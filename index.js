@@ -3,7 +3,7 @@ var register = {
 }
 
 function addTransaction(transaction) {
-    register.transactions.push(transaction);
+    register.transactions.push(transaction)
 }
 function reset() {
     register.transactions = []
@@ -11,8 +11,8 @@ function reset() {
 function getTotal() {
     var itemTotal = []
     var allItemsTogetherTotal = 0
-    for (let i = 0; i < register.transactions.length; i++) {
-        for (let j = 0; j < register.transactions[i].items.length; j++) {
+    for (var i = 0; i < register.transactions.length; i++) {
+        for (var j = 0; j < register.transactions[i].items.length; j++) {
             var singleItemTotal = register.transactions[i].items[j].price * register.transactions[i].items[j].quantity
             itemTotal.push(singleItemTotal)
         }
